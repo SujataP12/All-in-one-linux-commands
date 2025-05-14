@@ -144,113 +144,389 @@ Now, running x will clear the terminal screen.
 
 ## 1. Viewing Files and Directories
 
-- `ls`  
-  List files and directories in the current directory.  
-  **Example:** `ls -l`
+# `ls` Command in Linux (Ubuntu)
 
-- `pwd`  
-  Print the current working directory.  
-  **Example:** `pwd`
+The `ls` command is used to list the contents of directories in Linux systems. It is one of the most frequently used commands for file management.
 
-- `tree`  
-  Display directories and files in a tree-like format.  
-  **Example:** `tree`
+---
+
+## 🔧 Syntax
+
+```bash
+ls [options] [directory]
+```
+
+---
+
+## 📁 Basic Usage
+
+### 1. List files in the current directory
+```bash
+ls
+```
+
+**Output Example:**
+```text
+file1.txt  file2.log  folder1  script.sh
+```
+
+### 2. Long listing format (detailed view)
+```bash
+ls -l
+```
+
+**Output Example:**
+```text
+-rw-r--r-- 1 sujata sujata  1234 May 14 10:23 file1.txt
+drwxr-xr-x 2 sujata sujata  4096 May 14 10:25 folder1
+```
+
+### 3. Show hidden files
+```bash
+ls -a
+```
+
+**Output Example:**
+```text
+.  ..  .bashrc  file1.txt  folder1
+```
+
+### 4. Long listing with hidden files
+```bash
+ls -la
+```
+
+**Output Example:**
+```text
+drwxr-xr-x 5 sujata sujata 4096 May 14 10:30 .
+-rw-r--r-- 1 sujata sujata  220 May 14 10:10 .bashrc
+-rw-r--r-- 1 sujata sujata 1234 May 14 10:23 file1.txt
+```
+
+### 5. Human-readable file sizes
+```bash
+ls -lh
+```
+
+**Output Example:**
+```text
+-rw-r--r-- 1 user user 1.2K May 14 10:23 file1.txt
+```
+
+### 6. List files recursively
+```bash
+ls -R
+```
+
+**Output Example:**
+```text
+.:
+file1.txt  folder1
+
+./folder1:
+file2.txt
+```
+
+---
+
+## 🧩 Commonly Used Options
+
+| Option | Description |
+|--------|-------------|
+| `-l`   | Use a long listing format |
+| `-a`   | Show hidden files |
+| `-h`   | Human-readable file sizes |
+| `-R`   | List subdirectories recursively |
+| `-S`   | Sort files by size |
+| `-t`   | Sort by modification time |
+| `-r`   | Reverse sort order |
+
+---
+
+
+## ✅ Example Combining Multiple Options
+
+```bash
+ls -alh
+```
+
+**Output Example:**
+```text
+drwxr-xr-x 5 user user 4.0K May 14 10:30 .
+-rw-r--r-- 1 user user 1.2K May 14 10:23 file1.txt
+-rw-r--r-- 1 user user  220 May 14 10:10 .bashrc
+```
+
+---
+# `pwd` Command in Linux
+
+The `pwd` command stands for **Print Working Directory**. It displays the full absolute path of the current directory you are in.
+
+---
+
+## ✅ Basic Usage
+
+### 1. Print current directory
+
+```bash
+pwd
+```
+
+**Example Output:**
+```text
+/home/sujata/Documents/projects
+```
+
+---
+
+## 🧩 Common Options
+
+| Option   | Description                                 |
+|----------|---------------------------------------------|
+| `-L`     | Use the **logical** path (default)          |
+| `-P`     | Use the **physical** path (resolves symlinks) |
+
+---
+
+## 🧪 Examples
+
+### 1. Logical path (default behavior)
+
+```bash
+pwd -L
+```
+
+**Output Example:**
+```text
+/home/sujata/symlink-to-projects
+```
+
+### 2. Physical path (resolves symlinks)
+
+```bash
+pwd -P
+```
+
+**Output Example:**
+```text
+/home/sujata/Documents/projects
+```
+
+---
+# `tree` Command in Linux
+
+The `tree` command is used to display the directory structure of a path or the whole file system in a tree-like format.
+
+---
+
+## 📌 Common Options
+
+| Option       | Description                                      |
+|--------------|--------------------------------------------------|
+| `-L n`       | Limits the display to `n` directory levels       |
+| `-d`         | Lists directories only                           |
+| `-a`         | Includes hidden files                            |
+| `-f`         | Prints full path prefix for each file            |
+| `--noreport` | Omits the file/directory count at the end        |
+| `-h`         | Prints file sizes in human-readable format       |
+
+---
+
+## 📚 Examples
+
+```bash
+tree
+```
+> Displays the tree structure of the current directory.
+
+```bash
+tree -L 2
+```
+> Shows directory contents up to 2 levels deep.
+
+```bash
+tree -d
+```
+> Displays directories only.
+
+```bash
+tree -a
+```
+> Includes hidden files (those starting with `.`).
+
+```bash
+tree /path/to/directory
+```
+> Displays the structure of a specific directory.
+
+---
+
+## ✅ Use Cases
+
+- Visualizing directory structures.
+- Creating directory reports for documentation.
+- Debugging nested folders in development.
+- Listing all files including hidden ones for audits.
+- Printing directory tree in scripts or markdown documentation.
+
+---
+
+## 📝 Example Output
+
+```bash
+$ tree -L 2
+
+.
+├── Documents
+│   ├── Resume.pdf
+│   └── Report.docx
+├── Downloads
+│   └── movie.mp4
+└── Pictures
+    ├── beach.png
+    └── family.jpg
+```
+
+> You can redirect this output to a file for documentation:
+
+```bash
+tree -L 2 > directory_structure.txt
+```
 
 ## 2. Creating Files and Directories
 
 - `touch <filename>`  
   Create a new empty file.  
-  **Example:** `touch file.txt`
-
+  **Example:** 
+```sh
+touch file.txt
+```
 - `mkdir <dirname>`  
   Create a new directory.  
-  **Example:** `mkdir my_folder`
-
+  **Example:** 
+```sh
+mkdir my_folder
+```
 - `mkdir -p <parent>/<child>`  
   Create nested directories.  
-  **Example:** `mkdir -p projects/java`
-
+  **Example:** 
+```sh
+mkdir -p projects/java
+```
 ## 3. Copying Files and Directories
 
 - `cp <source> <destination>`  
   Copy a file.  
-  **Example:** `cp file.txt backup.txt`
-
+  **Example:** 
+```sh
+cp file.txt backup.txt
+```
 - `cp -r <source_dir> <destination_dir>`  
   Copy directories recursively.  
-  **Example:** `cp -r docs/ backup_docs/`
-
+  **Example:** 
+```sh
+cp -r docs/ backup_docs/
+```
 ## 4. Moving and Renaming Files
 
 - `mv <source> <destination>`  
   Move or rename files/directories.  
-  **Example:** `mv oldname.txt newname.txt`  
-  **Example:** `mv file.txt /home/user/Documents/`
-
+  **Example:** 
+```sh
+mv oldname.txt newname.txt
+mv file.txt /home/sujata/Documents/
+```
 ## 5. Deleting Files and Directories
 
 - `rm <filename>`  
   Delete a file.  
-  **Example:** `rm file.txt`
-
+  **Example:** 
+```sh
+rm file.txt
+```
 - `rm -r <dirname>`  
   Delete a directory and its contents recursively.  
-  **Example:** `rm -r my_folder/`
-
+  **Example:** 
+```sh
+rm -r my_folder/
+```
 - `rm -rf <dirname>`  
   Force delete directory without prompting. **(Use with caution)**  
-  **Example:** `rm -rf /tmp/test/`
-
+  **Example:** 
+```sh
+rm -rf /tmp/test/
+```
+Force delete directory without prompting.
+- `rmdir <directories names>`
+Remove multiple directories:
+```sh
+ rmdir dir1 dir2 dir3
+```
 ## 6. Viewing File Contents
 
 - `cat <filename>`  
   Display file content.  
-  **Example:** `cat file.txt`
-
+  **Example:** 
+```sh
+cat file.txt
+```
 - `less <filename>`  
   View file content one page at a time.  
-  **Example:** `less file.txt`
-
+  **Example:** 
+```sh
+less file.txt
+```
 - `head <filename>`  
   Show the first 10 lines of a file.  
-  **Example:** `head file.txt`
-
+  **Example:** 
+```sh
+head file.txt
+```
 - `tail <filename>`  
   Show the last 10 lines of a file.  
-  **Example:** `tail file.txt`
-
+  **Example:** 
+```sh
+tail file.txt
+```
 ## 7. Finding Files and Directories
 
 - `find <path> -name <pattern>`  
   Search for files and directories.  
-  **Example:** `find /home -name "*.txt"`
-
+  **Example:** 
+```sh
+find /home -name "*.txt"
+```
 - `locate <filename>`  
   Quickly find files (requires updated database with `updatedb`).  
-  **Example:** `locate file.txt`
-
+  **Example:** 
+```sh
+locate file.txt
+```
 ## 8. File Permissions and Ownership
 
 - `chmod <permissions> <filename>`  
   Change file permissions.  
-  **Example:** `chmod 755 script.sh`
-
+  **Example:** 
+```sh
+chmod 755 script.sh
+```
 - `chown <user>:<group> <filename>`  
   Change file owner and group.  
-  **Example:** `chown user:staff file.txt`
-
+  **Example:** 
+```sh
+chown sujata:staff file.txt
+```
 ## 9. Disk Usage and Space
 
-- `df -h`  
-  Display disk space usage in human-readable format.
-
-- `du -sh <directory>`  
-  Show size of a directory.
-
+- Display disk space usage in human-readable format.
+```sh
+df -h
+```
+- Show size of a directory.
+```sh
+du -sh <directory>
+```
 ---
-
-**Note:** Always be cautious when using destructive commands like `rm`, especially with `-rf`.
-
 
 
 
