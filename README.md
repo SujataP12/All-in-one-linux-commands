@@ -38,7 +38,8 @@ tty2 - User terminal
     ![image](https://github.com/user-attachments/assets/3a07908a-7ecc-4880-b6a1-c9fc01045213)
 
 13. **History**: History command shows all the previously used terminal commands in a list.
-    ![image](https://github.com/user-attachments/assets/52cd3198-7312-4170-836d-fb6fb9822715)
+    ![image](https://github.com/user-attachments/assets/26b02463-4152-426f-b534-32770d204177)
+
 
 15. **whatis**: Whatis shows a short particular information about a command.
     ![image](https://github.com/user-attachments/assets/196a40ab-67db-4f6b-9f12-50afb807df8f)
@@ -51,6 +52,7 @@ tty2 - User terminal
 
 To unalias type,
 unalias <your alias name>
+
     ![image](https://github.com/user-attachments/assets/42d36b1d-71ad-4614-b45b-622e06a47a77)
 
 16.**clear**: Clears the terminal
