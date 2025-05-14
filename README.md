@@ -31,3 +31,33 @@ tty2 - User terminal
   8. **lastlog**: This command is used to find the details of a recent login of all users or a particular user pass through as a flag.
   ![image](https://github.com/user-attachments/assets/2c6096da-3925-4f56-b4df-1b428f126d89)
 
+9. **Man**: This command shows the documentation of every command of linux.
+    ![image](https://github.com/user-attachments/assets/390a3ef2-afa5-47b2-8604-75eca2a63054)
+
+11. **Date**: Shows date
+    ![image](https://github.com/user-attachments/assets/3a07908a-7ecc-4880-b6a1-c9fc01045213)
+
+13. **History**: History command shows all the previously used terminal commands in a list.
+    ![image](https://github.com/user-attachments/assets/52cd3198-7312-4170-836d-fb6fb9822715)
+
+15. **whatis**: Whatis shows a short particular information about a command.
+    ![image](https://github.com/user-attachments/assets/196a40ab-67db-4f6b-9f12-50afb807df8f)
+
+17. **whereis**: Shows the location of binary, source and manual files for commands.
+    ![image](https://github.com/user-attachments/assets/92f24a49-9b75-4960-98d0-fb0b61bf2e31)
+
+19. **alias**: Rename a long repitive command with a short name. For example you can make the command ls -la to any of your suitable name like below example. Then you can use that name to use the command.
+    ![image](https://github.com/user-attachments/assets/2352380d-2cb0-417f-ac93-12e22d4d1da0)
+
+To unalias type,
+unalias <your alias name>
+    ![image](https://github.com/user-attachments/assets/42d36b1d-71ad-4614-b45b-622e06a47a77)
+
+16.**clear**: Clears the terminal
+![image](https://github.com/user-attachments/assets/46a4909a-2635-41e9-84eb-ee8d212d7be5)
+
+
+
+
+
+
