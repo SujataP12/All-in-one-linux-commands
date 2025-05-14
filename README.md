@@ -25,6 +25,9 @@ tty2 - User terminal
 6. **users**: Displays usernames of all users currently logged on the system.
     ![image](https://github.com/user-attachments/assets/e3de4695-a6b8-4367-8671-27c0466fed91)
    
- 7.**last**: Displays a list of all last logged in users. The list can be huge according to the number of user logins.
-       ![image](https://github.com/user-attachments/assets/bedb2d00-53de-4932-9819-ddc83088c4ac)
-8.
+   7.**last**: Displays a list of all last logged in users. The list can be huge according to the number of user logins.
+         ![image](https://github.com/user-attachments/assets/bedb2d00-53de-4932-9819-ddc83088c4ac) 
+       
+  8. **lastlog**: This command is used to find the details of a recent login of all users or a particular user pass through as a flag.
+  ![image](https://github.com/user-attachments/assets/2c6096da-3925-4f56-b4df-1b428f126d89)
+
